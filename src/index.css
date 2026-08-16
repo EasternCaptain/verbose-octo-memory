@@ -165,4 +165,24 @@ input {
   justify-content: space-evenly; 
   align-items: start; 
   margin-bottom: 5%;
+} 
+@media only screen and (max-width: 600px) {
+  .container-currency {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+  } 
+  input {
+    width: 250px; 
+  } 
+  .output-display {
+    font-size: 1.8rem;
+    font-weight: light; 
+  }
+  .container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
 }
