@@ -54,9 +54,9 @@ export default function ExchangeRate() {
           setAmount(e.target.value) 
         }}/>
       </div>
-
-      <div className="current-currency">
-        <label>Converting from: {currentCurrencyLabel}</label><br></br> 
+      <div class="container-currency">
+        <div className="current-currency">
+        <label>Convert from: {currentCurrency}</label><br></br><br></br>
         <Select 
         options={options} 
         onChange={(e) => {
@@ -68,7 +68,7 @@ export default function ExchangeRate() {
       </div>
 
       <div className="convert-currency">
-        <label>Convert to: {convertCurrencyLabel}</label><br></br> 
+        <label>Convert to: {convertCurrency}</label><br></br><br></br>
         <Select 
         options={options} 
         onChange={(e) => {
@@ -77,7 +77,9 @@ export default function ExchangeRate() {
         }} 
         defaultValue={options[145]}
         />
+        </div>
       </div>
+      
 
       <p class="output-display">{conversion ? conversion.toLocaleString(): rateExchange['TZS']} {convertCurrency}</p>
     </div>
