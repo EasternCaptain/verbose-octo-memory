@@ -152,4 +152,10 @@ input {
 } 
 .current-currency, .convert-currency {
   text-transform: capitalize;  
-} 
+}
+.output-display {
+  font-size: 3rem; 
+  font-weight: bold;
+  color: rgb(187, 52, 163); 
+  font-family: serif; 
+}

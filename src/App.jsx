@@ -79,7 +79,7 @@ export default function ExchangeRate() {
         />
       </div>
 
-      <p>{conversion ? conversion.toFixed(2): rateExchange['TZS']} {convertCurrency}</p>
+      <p class="output-display">{conversion ? conversion.toLocaleString(): rateExchange['TZS']} {convertCurrency}</p>
     </div>
   )
 }
