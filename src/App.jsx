@@ -9,7 +9,7 @@ export default function ExchangeRate() {
   const [ convertCurrency, setConvertCurrency ] = useState('TZS'); 
   const [ convertCurrencyLabel, setConverteCurrencyLabel ] = useState('Tanzanian Shilling');
   const [ rateExchange, setRateExchange ] = useState({}); 
-
+  const [ errorMessage, setErrorMessage ] = useState('') 
 
   const apiKey = "4887aa75e7a41ef4f73b2de0" 
   useEffect(() => {
@@ -25,6 +25,7 @@ export default function ExchangeRate() {
         setData(supportedCurrencyData.supported_codes);    
 
       } catch(e) {
+        setErrorMessage('⚠ Sorry there was a network Error'); 
         console.log(e); 
       }
         }
@@ -54,7 +55,7 @@ export default function ExchangeRate() {
           setAmount(e.target.value) 
         }}/>
       </div>
-      <div class="container-currency">
+      <div className="container-currency">
         <div className="current-currency">
         <label className="currency-label">Convert from: {currentCurrency}</label><br></br><br></br>
         <Select 
@@ -81,7 +82,8 @@ export default function ExchangeRate() {
       </div>
       
 
-      <p class="output-display">{conversion ? conversion.toLocaleString(): rateExchange['TZS']} {convertCurrency}</p>
+      <p className="output-display">{conversion ? conversion.toLocaleString(): rateExchange['TZS']} {convertCurrency}</p>
+      <p>{errorMessage}</p>
     </div>
   )
 }
