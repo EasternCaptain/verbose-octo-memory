@@ -145,7 +145,7 @@ input {
 } 
 
 .current-currency label, .convert-currency label {
-  font-size: 1.5rem; 
+  font-size: 1.3rem; 
   font-weight: bolder; 
   font-family: 'Times New Roman', Times, serif; 
   color:rgba(11, 222, 230, 0.953); 
@@ -185,4 +185,10 @@ input {
     justify-content: center; 
     align-items: center; 
   }
+  .current-currency label, .convert-currency label {
+  font-size: 1.2rem; 
+  font-weight: bold; 
+  font-family: 'Times New Roman', Times, serif; 
+  color:rgba(11, 222, 230, 0.953); 
+} 
 }
